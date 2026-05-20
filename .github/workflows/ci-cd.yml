@@ -17,8 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AWS_REGION: us-east-1
-      S3_BUCKET_NAME: your-s3-bucket-name
+      S3_BUCKET_NAME: github-s3-etl
       API_URL: https://jsonplaceholder.typicode.com/users
 
     steps:
@@ -60,14 +59,14 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
       # =========================
       # Run ETL Pipeline
       # =========================
       - name: Run ETL Script
         run: |
-          python etl.py
+          python main.py
 
       # =========================
       # Upload Logs (Optional)
