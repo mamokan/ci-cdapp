@@ -10,11 +10,11 @@ from datetime import datetime
 
 API_URL = "https://jsonplaceholder.typicode.com/users"
 
-AWS_ACCESS_KEY = "YOUR_ACCESS_KEY"
-AWS_SECRET_KEY = "YOUR_SECRET_KEY"
-AWS_REGION = "us-east-1"
+# AWS_ACCESS_KEY = "YOUR_ACCESS_KEY"
+# AWS_SECRET_KEY = "YOUR_SECRET_KEY"
+# AWS_REGION = "us-east-1"
 
-S3_BUCKET_NAME = "your-s3-bucket-name"
+S3_BUCKET_NAME = "github-s3-etl"
 S3_FILE_NAME = f"etl/users_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
 
 # =========================
