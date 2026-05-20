@@ -66,7 +66,7 @@ jobs:
       # =========================
       - name: Run ETL Script
         run: |
-          python main.py
+          python etl.py
 
       # =========================
       # Upload Logs (Optional)
